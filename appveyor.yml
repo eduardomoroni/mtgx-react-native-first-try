@@ -1,0 +1,27 @@
+environment:
+  matrix:
+    - nodejs_version: '6'
+matrix:
+  fast_finish: true
+build: off
+clone_depth: 1
+cache:
+  - node_modules
+  - '%APPDATA%\npm-cache'
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - git config core.symlinks true
+  - git reset --hard
+  - npm install --global npm
+  - set PATH=%APPDATA%\npm;%PATH%
+  - npm install
+  - npm prune
+test_script:
+  - npm install -g nyc
+  - npm install -g codeclimate-test-reporter
+  - set CODECLIMATE_REPO_TOKEN=52773f6aeeb632f221f21eaaad00b8e3b13f6062d050754000e1b0bd6dca7bb6
+  - set NODE_ENV=production
+  - node --version
+  - npm --version
+  - nyc --reporter=lcov npm test
+  - codeclimate-test-reporter < ./coverage/lcov.info

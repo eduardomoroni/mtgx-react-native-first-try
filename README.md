@@ -1,11 +1,12 @@
 # MTGX
-[![iOS Build Status](https://www.bitrise.io/app/96424a50d999f170.svg?token=niy_FwaKFWnvZgVW4DKBuw&branch=master)](https://www.bitrise.io/app/96424a50d999f170)
-[![Android Build Status](https://www.bitrise.io/app/17dd66558fcc0b67.svg?token=ec2rfIqY43HPf-cyvg_m_Q&branch=master)](https://www.bitrise.io/app/17dd66558fcc0b67)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+[![Build status](https://ci.appveyor.com/api/projects/status/bhxbk35x0ni3u679?svg=true)](https://ci.appveyor.com/project/eduardomoroni/mtgx)
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=589b3f3345295901002c525a&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/589b3f3345295901002c525a/build/latest?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e74a0351ec794f2a9eda900f3e79893f)](https://www.codacy.com/app/eduardomoroni/mtgx?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eduardomoroni/mtgx&amp;utm_campaign=Badge_Grade)
 [![Code climate](https://codeclimate.com/github/eduardomoroni/mtgx/badges/gpa.svg)](https://codeclimate.com/github/eduardomoroni/mtgx)
 [![Test Coverage](https://codeclimate.com/github/eduardomoroni/mtgx/badges/coverage.svg)](https://codeclimate.com/github/eduardomoroni/mtgx/coverage)
+[![Dependency Status](https://dependencyci.com/github/eduardomoroni/mtgx/badge)](https://dependencyci.com/github/eduardomoroni/mtgx)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/eduardomoroni/mtgx/blob/master/LICENSE)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 * Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
 
