@@ -19,7 +19,6 @@ import I18n from 'react-native-i18n'
 import styles from './Styles/UsageExamplesScreenStyle'
 
 class UsageExamplesScreen extends React.Component {
-
   componentWillReceiveProps (nextProps) {
     // Request push premissions only if the user has logged in.
     const { loggedIn } = nextProps
