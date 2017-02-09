@@ -1,5 +1,6 @@
 {
   "presets": [ "react-native" ],
+  "plugins": ["transform-flow-strip-types"],
   "env": {
     "development": {
       "sourceMaps": "inline"
