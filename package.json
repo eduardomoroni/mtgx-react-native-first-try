@@ -2,11 +2,13 @@
   "name": "mtgx",
   "version": "0.0.1",
   "private": true,
+  "snyk": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "lint": "standard --verbose | snazzy",
     "lintdiff": "git diff --name-only --cached --relative | grep '\\.js$' | xargs standard | snazzy",
-    "fixcode": "standard --fix | snazzy",
+    "lint-check": "standard --verbose | snazzy",
+    "lint-fixcode": "standard --fix | snazzy",
+    "flow-check": "flow --show-all-errors",
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
     "clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
     "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && npm cache clean && npm i",
@@ -22,9 +24,8 @@
     "android:devices": "$ANDROID_HOME/platform-tools/adb devices",
     "android:logcat": "$ANDROID_HOME/platform-tools/adb logcat *:S ReactNative:V ReactNativeJS:V",
     "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82",
-    "flow": "flow --show-all-errors",
     "snyk-protect": "snyk protect",
-    "git-hook": "npm run lint",
+    "git-hook": "npm run lint-check && npm run flow-check",
     "prepublish": "npm run snyk-protect",
     "precommit": "npm run git-hook",
     "prepush": "npm run git-hook"
@@ -65,7 +66,7 @@
     "eslint-plugin-promise": "^3.4.1",
     "eslint-plugin-react": "^6.9.0",
     "eslint-plugin-standard": "^2.0.1",
-    "flow-bin": "0.33.0",
+    "flow-bin": "0.35.0",
     "husky": "^0.13.1",
     "mockery": "^2.0.0",
     "nyc": "^9.0.1",
@@ -107,6 +108,5 @@
       "FormData",
       "React$Element"
     ]
-  },
-  "snyk": true
+  }
 }

@@ -5,6 +5,7 @@ matrix:
   fast_finish: true
 build: off
 clone_depth: 1
+skip_branch_with_pr: true
 cache:
   - node_modules
   - '%APPDATA%\npm-cache'
