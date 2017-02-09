@@ -17,7 +17,6 @@ import '../Components/DrawerButton'
 import ExamplesRegistry from '../Services/ExamplesRegistry'
 
 class AllComponentsScreen extends React.Component {
-
   renderAndroidWarning () {
     if (Platform.OS === 'android') {
       return (

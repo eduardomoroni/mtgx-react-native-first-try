@@ -11,7 +11,6 @@ import AlertMessage from '../Components/AlertMessage'
 import styles from './Styles/ListviewExampleStyle'
 
 class ListviewSectionsExample extends React.Component {
-
   state: {
     dataSource: Object
   }

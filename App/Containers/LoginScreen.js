@@ -25,7 +25,6 @@ type LoginScreenProps = {
 }
 
 class LoginScreen extends React.Component {
-
   props: LoginScreenProps
 
   state: {
@@ -167,7 +166,6 @@ class LoginScreen extends React.Component {
       </ScrollView>
     )
   }
-
 }
 
 const mapStateToProps = (state) => {

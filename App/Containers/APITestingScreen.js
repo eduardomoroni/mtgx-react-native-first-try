@@ -85,7 +85,6 @@ export default class APITestingScreen extends React.Component {
 }
 
 class APIResult extends React.Component {
-
   state: {
     message: boolean,
     title: boolean
