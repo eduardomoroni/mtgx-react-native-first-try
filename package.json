@@ -23,9 +23,11 @@
     "android:logcat": "$ANDROID_HOME/platform-tools/adb logcat *:S ReactNative:V ReactNativeJS:V",
     "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82",
     "flow": "flow --show-all-errors",
+    "snyk-protect": "snyk protect",
+    "git-hook": "npm run lint",
+    "prepublish": "npm run snyk-protect",
     "precommit": "npm run git-hook",
-    "prepush": "npm run git-hook",
-    "git-hook": "npm run lint"
+    "prepush": "npm run git-hook"
   },
   "dependencies": {
     "apisauce": "^0.6.0",
@@ -49,7 +51,8 @@
     "redux-persist": "^3.5.0",
     "redux-saga": "^0.13.0",
     "reduxsauce": "0.2.0",
-    "seamless-immutable": "^6.3.0"
+    "seamless-immutable": "^6.3.0",
+    "snyk": "^1.25.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",
@@ -104,5 +107,6 @@
       "FormData",
       "React$Element"
     ]
-  }
+  },
+  "snyk": true
 }
