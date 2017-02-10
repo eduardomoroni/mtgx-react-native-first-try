@@ -1,6 +1,6 @@
-#Continuous Integration DockerFile
+#Code Fresh CI DockerFile
 FROM node:latest
-MAINTAINER NodeJs
+MAINTAINER Eduardo Morôni <eduardomoroni@gmail.com>
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
