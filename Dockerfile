@@ -1,7 +1,6 @@
-#Code Fresh CI DockerFile
-#https://hub.docker.com/r/library/node/tags/
+#Continuous Integration DockerFile
 FROM node:latest
-MAINTAINER Eduardo Morôni <eduardomoroni@gmail.com>
+MAINTAINER NodeJs
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app

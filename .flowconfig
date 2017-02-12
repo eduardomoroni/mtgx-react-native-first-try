@@ -3,7 +3,7 @@
 .*/*[.]android.js
 
 ; Ignore "BUCK" generated dirs
-./\.buckd/
+<PROJECT_ROOT>/\.buckd/
 
 ; Ignore unexpected extra "@providesModule"
 .*/node_modules/.*/node_modules/fbjs/.*
@@ -18,10 +18,10 @@
 .*/node_modules/.*
 
 ;Word around to avoid flows error Required module not found
-./flow/modulesnotfound.js
+<PROJECT_ROOT>/flow/modulesnotfound.js
 
 [include]
-./App/
+<PROJECT_ROOT>/App/
 
 [libs]
 node_modules/react-native/Libraries/react-native/react-native-interface.js
@@ -34,8 +34,8 @@ module.system=haste
 experimental.strict_type_args=true
 
 ; https://stackoverflow.com/questions/36912675/flow-required-module-not-found/37272883#37272883
-module.name_mapper='.*\.css$' -> './flow/css-stub.js'
-module.name_mapper='.*\.\(svg\|png\|jpg\|gif\)$' -> './flow/img-stub.js'
+module.name_mapper='.*\.css$' -> '<PROJECT_ROOT>/flow/css-stub.js'
+module.name_mapper='.*\.\(svg\|png\|jpg\|gif\)$' -> '<PROJECT_ROOT>/flow/img-stub.js'
 
 munge_underscores=true
 
@@ -53,4 +53,4 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 unsafe.enable_getters_and_setters=true
 
 [version]
-0.39.0
+^0.35.0
