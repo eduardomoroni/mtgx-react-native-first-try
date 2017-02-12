@@ -10,15 +10,16 @@ steps:
     title: Running Unit Tests
     image: '${{BuildingDockerImage}}'
     working_directory: IMAGE_WORK_DIR
-    environment:
-    - NODE_ENV=production #Changes behavior of npm install / yarn install
     entry_point:
       - /bin/sh
       - /codefresh/volume/cf-generated/unit_test_script
     create_file:
       path: /codefresh/volume/cf-generated
       name: unit_test_script
-      content: npm test
+      content:
+        - npm version
+        - npm run lint-check
+        - npm test
     on_success:
       metadata:
         set:

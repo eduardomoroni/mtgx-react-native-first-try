@@ -7,13 +7,15 @@
 [![Test Coverage](https://codeclimate.com/github/eduardomoroni/mtgx/badges/coverage.svg)](https://codeclimate.com/github/eduardomoroni/mtgx/coverage)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/eduardomoroni/mtgx/blob/master/LICENSE)
 
+* Standard compliant React Native App Utilizing
+
 ## :arrow_up: How to Setup
 
-**Step 1:** make sure you have [React Native environment ready](https://facebook.github.io/react-native/docs/getting-started.htmlw).
+**Step 1:** git clone this repo:
 
-**Step 2:** git clone this repo && cd to the cloned repo:
+**Step 2:** cd to the cloned repo:
 
-**Step 3:** Install the Application with `npm install` or `yarn install`
+**Step 3:** Install the Application with `npm install`
 
 
 ## :arrow_forward: How to Run App
@@ -26,7 +28,8 @@
     * Run Genymotion
     * run `react-native run-android`
 
-## :no_entry_sign: Standard Compliant [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+## :no_entry_sign: Standard Compliant
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 This project adheres to JS Standard and our CI enforces this. Every time that you commit is verified if code is compliant, If you have to bypass lint for a special commit that you will come back and clean then you can bypass git hooks with adding `--no-verify` to your commit command.
 
@@ -51,8 +54,5 @@ Secrets.GOOGLE_MAPS_API_KEY  // 'abcdefgh'
 
 The `.env` file is ignored by git keeping those secrets out of your repo.
 
-## Reactotron
-This project is [Reactotron](https://github.com/infinitered/reactotron) ready
-
 ## Check-points:
-- Do we need snazzy & standard & babel-eslint installed as global?
+- snazzy & standard & babel-eslint needs to be installed as global?
