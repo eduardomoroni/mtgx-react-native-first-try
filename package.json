@@ -12,7 +12,7 @@
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
     "clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
     "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && npm cache clean && npm i",
-    "test": "ava",
+    "test": "ava --verbose",
     "test:watch": "ava --watch",
     "lcov": "nyc --reporter=lcov npm test",
     "codeclimate:coverage": "npm run lcov && CODECLIMATE_REPO_TOKEN=52773f6aeeb632f221f21eaaad00b8e3b13f6062d050754000e1b0bd6dca7bb6 codeclimate-test-reporter < ./coverage/lcov.info",
@@ -24,10 +24,8 @@
     "android:devices": "$ANDROID_HOME/platform-tools/adb devices",
     "android:logcat": "$ANDROID_HOME/platform-tools/adb logcat *:S ReactNative:V ReactNativeJS:V",
     "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82",
-    "snyk-protect": "snyk protect",
-    "git-hook": "npm run lint-check && npm run flow-check",
-    "prepush": "npm run git-hook",
-    "precommit": "npm run git-hook"
+    "precommit": "npm run lint-check && npm run flow-check",
+    "prepush": "ava --fail-fast"
   },
   "dependencies": {
     "apisauce": "^0.6.0",
@@ -54,11 +52,11 @@
     "seamless-immutable": "^6.3.0"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.18.1",
     "babel-eslint": "^7.1.1",
     "babel-preset-es2015": "^6.18.0",
     "enzyme": "^2.6.0",
-    "flow-bin": "0.33.0",
+    "flow-bin": "0.39.0",
     "husky": "^0.13.1",
     "mockery": "^2.0.0",
     "nyc": "^9.0.1",
