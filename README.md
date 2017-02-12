@@ -54,5 +54,5 @@ The `.env` file is ignored by git keeping those secrets out of your repo.
 ## Reactotron
 This project is [Reactotron](https://github.com/infinitered/reactotron) ready
 
-## Check-points:
-- Do we need snazzy & standard & babel-eslint installed as global?
+## Atom config
+We also have a fully customized ATOM config to boost your performance contributing with MTGX, take a look at atom package [sync-settings](https://atom.io/packages/sync-settings) and restore this config [backup](https://gist.github.com/eduardomoroni/a932ad447f9e1dbcd638de0b35b6b65e).
