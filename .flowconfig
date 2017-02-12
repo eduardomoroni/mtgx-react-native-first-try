@@ -3,7 +3,7 @@
 .*/*[.]android.js
 
 ; Ignore "BUCK" generated dirs
-<PROJECT_ROOT>/\.buckd/
+./\.buckd/
 
 ; Ignore unexpected extra "@providesModule"
 .*/node_modules/.*/node_modules/fbjs/.*
@@ -18,10 +18,10 @@
 .*/node_modules/.*
 
 ;Word around to avoid flows error Required module not found
-<PROJECT_ROOT>/flow/modulesnotfound.js
+./flow/modulesnotfound.js
 
 [include]
-<PROJECT_ROOT>/App/
+./App/
 
 [libs]
 node_modules/react-native/Libraries/react-native/react-native-interface.js
@@ -33,14 +33,13 @@ module.system=haste
 
 experimental.strict_type_args=true
 
-; https://stackoverflow.com/questions/36912675/flow-required-module-not-found/37272883#37272883
-module.name_mapper='.*\.css$' -> '<PROJECT_ROOT>/flow/css-stub.js'
-module.name_mapper='.*\.\(svg\|png\|jpg\|gif\)$' -> '<PROJECT_ROOT>/flow/img-stub.js'
-
 munge_underscores=true
 
 module.name_mapper='^image![a-zA-Z0-9$_-]+$' -> 'GlobalImageStub'
 module.name_mapper='^[./a-zA-Z0-9$_-]+\.\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\|pdf\)$' -> 'RelativeImageStub'
+
+; https://stackoverflow.com/questions/36912675/flow-required-module-not-found/37272883#37272883
+module.name_mapper='.*\.\(svg\|png\|jpg\|gif\)$' -> './flow/img-stub.js'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
@@ -53,4 +52,4 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 unsafe.enable_getters_and_setters=true
 
 [version]
-0.33.0
+0.39.0
