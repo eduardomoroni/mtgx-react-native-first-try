@@ -19,8 +19,7 @@ steps:
       path: /codefresh/volume/cf-generated
       name: unit_test_script
       content:
-        - npm --version
-        - node --version
+        - npm version
         - npm run lint-check
         - npm test
     on_success:
