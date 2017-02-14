@@ -6,6 +6,7 @@ declare module 'redux' { declare var exports: any; }
 declare module 'seamless-immutable' { declare var exports: any; }
 declare module 'reduxsauce' { declare var exports: any; }
 declare module 'ramdasauce' { declare var exports: any; }
+declare module 'react-native-fbsdk' { declare var exports: any; }
 declare module 'react-redux' { declare var exports: any; }
 declare module 'react-native-router-flux' { declare var exports: any; }
 declare module 'react-native-drawer' { declare var exports: any; }

@@ -8,6 +8,7 @@ import TemperatureActions from '../Redux/TemperatureRedux'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import { Colors, Images, Metrics } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
+import FacebookLogin from '../Components/FacebookLogin'
 // external libs
 import Icon from 'react-native-vector-icons/FontAwesome'
 import * as Animatable from 'react-native-animatable'
@@ -103,6 +104,9 @@ class UsageExamplesScreen extends React.Component {
           <Icon.Button name='facebook' style={styles.facebookButton} backgroundColor={Colors.facebook} onPress={() => window.alert('Facebook')}>
             {I18n.t('loginWithFacebook')}
           </Icon.Button>
+        </View>
+        <View style={styles.groupContainer}>
+          <FacebookLogin />
         </View>
         {this.renderHeader(I18n.t('rnAnimatable'))}
         <View style={styles.groupContainer}>
