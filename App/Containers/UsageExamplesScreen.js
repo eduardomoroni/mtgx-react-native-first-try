@@ -9,6 +9,7 @@ import { Actions as NavigationActions } from 'react-native-router-flux'
 import { Colors, Images, Metrics } from '../Themes'
 import RoundedButton from '../Components/RoundedButton'
 import FacebookLogin from '../Components/FacebookLogin'
+import FacebookButton from '../Components/FacebookButton'
 // external libs
 import Icon from 'react-native-vector-icons/FontAwesome'
 import * as Animatable from 'react-native-animatable'
@@ -107,6 +108,9 @@ class UsageExamplesScreen extends React.Component {
         </View>
         <View style={styles.groupContainer}>
           <FacebookLogin />
+        </View>
+        <View style={styles.groupContainer}>
+          <FacebookButton />
         </View>
         {this.renderHeader(I18n.t('rnAnimatable'))}
         <View style={styles.groupContainer}>

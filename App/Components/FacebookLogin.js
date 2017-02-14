@@ -5,7 +5,14 @@ import FBSDK from 'react-native-fbsdk'
 
 const { LoginButton, AccessToken } = FBSDK
 
+// https://developers.facebook.com/docs/react-native/login
 export default class FacebookLogin extends React.Component {
+
+  // https://developers.facebook.com/docs/facebook-login/permissions
+  getPermissions () {
+    return ['public_profile', 'user_friends', 'user_location']
+  }
+
   onLoginFinished (error: boolean, result: Object) {
     if (error) {
       window.alert('login has error: ' + result.error)
@@ -20,12 +27,16 @@ export default class FacebookLogin extends React.Component {
     }
   }
 
+  onLogoutFinished () {
+    window.alert('logout.')
+  }
+
   render () {
     return (
       <LoginButton
-        publishPermissions={['publish_actions']}
+        readPermissions={this.getPermissions()}
         onLoginFinished={this.onLoginFinished}
-        onLogoutFinished={() => window.alert('logout.')} />
+        onLogoutFinished={this.onLogoutFinished} />
     )
   }
 }
