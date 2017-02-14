@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PropTypes } from 'react'
-import { View, ScrollView, Text, TouchableOpacity, Image } from 'react-native'
+import { View, ScrollView, Text, TouchableOpacity, Image, Alert } from 'react-native'
 import { connect } from 'react-redux'
 import LoginActions, { isLoggedIn } from '../Redux/LoginRedux'
 import TemperatureActions from '../Redux/TemperatureRedux'
@@ -102,7 +102,7 @@ class UsageExamplesScreen extends React.Component {
           <Icon name='warning' size={Metrics.icons.medium} color={Colors.ember} />
         </View>
         <View style={styles.groupContainer}>
-          <Icon.Button name='facebook' style={styles.facebookButton} backgroundColor={Colors.facebook} onPress={() => window.alert('Facebook')}>
+          <Icon.Button name='facebook' style={styles.facebookButton} backgroundColor={Colors.facebook} onPress={() => Alert.alert('Alert', 'Facebook')}>
             {I18n.t('loginWithFacebook')}
           </Icon.Button>
         </View>

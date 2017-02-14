@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react'
-import { TouchableOpacity, Text } from 'react-native'
+import { TouchableOpacity, Text, Alert } from 'react-native'
 import styles from './Styles/FullButtonStyle'
 import ExamplesRegistry from '../Services/ExamplesRegistry'
 
@@ -9,7 +9,7 @@ import ExamplesRegistry from '../Services/ExamplesRegistry'
 ExamplesRegistry.add('Full Button', () =>
   <FullButton
     text='Hey there'
-    onPress={() => window.alert('Full Button Pressed!')}
+    onPress={() => Alert.alert('Title', 'Full Button Pressed!')}
   />
 )
 

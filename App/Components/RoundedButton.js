@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react'
-import { TouchableOpacity, Text } from 'react-native'
+import { TouchableOpacity, Text, Alert } from 'react-native'
 import styles from './Styles/RoundedButtonStyle'
 import ExamplesRegistry from '../Services/ExamplesRegistry'
 
@@ -9,7 +9,7 @@ import ExamplesRegistry from '../Services/ExamplesRegistry'
 ExamplesRegistry.add('Rounded Button', () =>
   <RoundedButton
     text='real buttons have curves'
-    onPress={() => window.alert('Rounded Button Pressed!')}
+    onPress={() => Alert.alert('Alert', 'Rounded Button Pressed!')}
   />
 )
 

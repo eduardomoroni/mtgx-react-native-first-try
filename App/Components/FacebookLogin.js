@@ -2,6 +2,7 @@
 
 import React from 'react'
 import FBSDK from 'react-native-fbsdk'
+import { Alert } from 'react-native'
 
 const { LoginButton, AccessToken } = FBSDK
 
@@ -15,20 +16,20 @@ export default class FacebookLogin extends React.Component {
 
   onLoginFinished (error: boolean, result: Object) {
     if (error) {
-      window.alert('login has error: ' + result.error)
+      Alert.alert('ALERT', 'login has error: ' + result.error)
     } else if (result.isCancelled) {
-      window.alert('login is cancelled.')
+      Alert.alert('ALERT', 'login is cancelled.')
     } else {
       AccessToken.getCurrentAccessToken().then(
         (data) => {
-          window.alert(data.accessToken.toString())
+          Alert.alert('ALERT', data.accessToken.toString())
         }
       )
     }
   }
 
   onLogoutFinished () {
-    window.alert('logout.')
+    Alert.alert('ALERT', 'logout.')
   }
 
   render () {

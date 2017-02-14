@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button } from 'react-native'
+import { Button, Alert } from 'react-native'
 
 import { LoginManager } from 'react-native-fbsdk'
 
@@ -8,13 +8,13 @@ export default class FacebookButton extends Component {
     LoginManager.logInWithReadPermissions(['public_profile', 'email', 'user_friends']).then(
       function (result) {
         if (result.isCancelled) {
-          window.alert('Login cancelled')
+          Alert.alert('ALERT', 'Login cancelled')
         } else {
-          window.alert('Login success with permissions: ' + result.grantedPermissions.toString())
+          Alert.alert('ALERT', 'Login success with permissions: ' + result.grantedPermissions.toString())
         }
       },
       function (error) {
-        window.alert('Login fail with error: ' + error)
+        Alert.alert('ALERT', 'Login fail with error: ' + error)
       }
     )
   }

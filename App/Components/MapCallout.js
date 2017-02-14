@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity, Alert } from 'react-native'
 import MapView from 'react-native-maps'
 import Styles from './Styles/MapCalloutStyle'
 import ExamplesRegistry from '../Services/ExamplesRegistry'
@@ -10,7 +10,7 @@ ExamplesRegistry.add('Map Callout', () =>
     location={{
       title: 'Callout Example'
     }}
-    onPress={() => window.alert('That tickles!')}
+    onPress={() => Alert.alert('ALERT', 'That tickles!')}
   />
 )
 

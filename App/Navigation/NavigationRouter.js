@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import { Scene, Router } from 'react-native-router-flux'
+import { Alert } from 'react-native'
 import Styles from './Styles/NavigationContainerStyle'
 import NavigationDrawer from './NavigationDrawer'
 import NavItems from './NavItems'
@@ -52,8 +53,8 @@ class NavigationRouter extends Component {
   }
 }
 
-function customAlert (alert) {
-  window.alert(alert)
+function customAlert (alertMessage) {
+  Alert.alert('ALERT TITLE', alertMessage)
 }
 
 export default NavigationRouter
