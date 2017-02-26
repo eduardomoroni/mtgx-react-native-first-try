@@ -1,0 +1,73 @@
+{
+  "name": "ReactNativePlayground",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "ava --verbose",
+    "test-watch": "ava --watch",
+    "lint-check": "standard --verbose | snazzy",
+    "lint-fixcode": "standard --fix --verbose | snazzy",
+    "flow-check": "flow --show-all-errors",
+    "nyc-lcov": "nyc --reporter=lcov npm test",
+    "precommit": "npm run flow-check && npm run lint-fixcode",
+    "prepush": "ava --fail-fast"
+  },
+  "dependencies": {
+    "enzyme": "^2.7.1",
+    "firebase": "^3.6.9",
+    "ramda": "^0.23.0",
+    "react": "~15.4.0",
+    "react-dom": "^15.4.2",
+    "react-native": "0.41.2",
+    "react-native-animatable": "^1.1.0",
+    "react-native-drawer": "^2.3.0",
+    "react-native-i18n": "^1.0.0",
+    "react-native-router-flux": "^3.37.0",
+    "react-native-vector-icons": "^4.0.0",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-saga": "^0.14.3",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "ava": "^0.18.1",
+    "babel-eslint": "^7.1.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-react-native": "1.9.1",
+    "babel-register": "^6.23.0",
+    "flow-bin": "^0.39.0",
+    "husky": "^0.13.1",
+    "mockery": "^2.0.0",
+    "nyc": "^10.1.2",
+    "react-native-mock": "^0.3.1",
+    "react-test-renderer": "~15.4.0",
+    "sinon": "^1.17.7",
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0"
+  },
+  "ava": {
+    "files": [
+      "__tests__/**/*.js",
+      "!__tests__/Setup.js"
+    ],
+    "require": [
+      "babel-register",
+      "babel-polyfill",
+      "react-native-mock/mock",
+      "./__tests__/Setup"
+    ],
+    "babel": "inherit"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "it",
+      "__DEV__"
+    ],
+    "ignore": [
+      "flow/"
+    ]
+  },
+  "snyk": true
+}
