@@ -1,4 +1,4 @@
-package com.reactnativeplayground;
+package com.mtgx;
 
 import android.app.Application;
 
