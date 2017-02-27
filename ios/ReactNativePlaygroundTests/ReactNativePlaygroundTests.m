@@ -16,11 +16,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React Native!"
 
-@interface ReactNativePlaygroundTests : XCTestCase
+@interface mtgxTests : XCTestCase
 
 @end
 
-@implementation ReactNativePlaygroundTests
+@implementation mtgxTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

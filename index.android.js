@@ -3,4 +3,4 @@
 import { AppRegistry } from 'react-native'
 import App from './src/App'
 
-AppRegistry.registerComponent('ReactNativePlayground', () => App)
+AppRegistry.registerComponent('mtgx', () => App)
