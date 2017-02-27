@@ -1,0 +1,57 @@
+# Welcome to Jekyll!
+#
+
+# Site settings
+title: MTG-X
+description: |
+  A Revolutionary App for MTG community
+owner: Eduardo Morôni
+first_published: 2017
+email: eduardomoroni@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+social:
+  twitter: https://twitter.com/eduardomoroni
+  github: https://github.com/eduardomoroni
+  linkedin-square: https://linkedin.com/in/eduardomoroni
+  facebook-official: https://facebook.com/eduardomoroni
+  #google-plus-square: https://plus.google.com/100737394365514649782
+  email: eduardomoroni@gmail.com
+  #flickr:
+  #instagram:
+  #youtube-square:
+  #spotify:
+  stack-overflow: http://stackoverflow.com/users/1310623/eduardomoroni
+  #vimeo:
+  #reddit:
+  #stubleupon:
+  #delicious:
+  #pied-piper:
+  #digg:
+  #soundcloud:
+  #deviantart:
+  #angellist:
+  #tumblr-square:
+  #stackexchange:
+  #weibo:
+  #trello:
+  #foursquare:
+  #linux:
+  #bitbucket-square:
+  #vk:
+  slack: mtg-x.slack.com
+  #vine:
+  #weixin:
+  #yelp:
+  #skyatlas:
+  #leanpub:
+  #connectdevelop:
+  #ils:
+  #forumbee:
+  #tripadvisor:
+  #amazon:
+
+# Build settings
+markdown: kramdown
+#sass:
+#  style: compressed
