@@ -13,7 +13,9 @@
     "codeclimate-coverage": "CODECLIMATE_REPO_TOKEN=c9a75afa762230a7127f80f84f469ced77e563f636669221fdadf17a4c8c8037 codeclimate-test-reporter < ./coverage/lcov.info",
     "update-coverage": "npm run nyc-lcov && npm run codeclimate-coverage",
     "precommit": "npm run flow-check && npm run lint-fixcode",
-    "prepush": "ava --fail-fast"
+    "prepush": "ava --fail-fast",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "enzyme": "^2.7.1",
@@ -30,7 +32,8 @@
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "redux-saga": "^0.14.3",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "snyk": "^1.30.0"
   },
   "devDependencies": {
     "ava": "^0.18.1",
