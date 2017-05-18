@@ -8,3 +8,7 @@ patch:
         patched: '2017-02-15T12:40:59.588Z'
     - react-native > connect > compression > accepts > negotiator:
         patched: '2017-02-15T12:40:59.588Z'
+    - react-native-router-flux > react-native > connect > compression > accepts > negotiator:
+        patched: '2017-05-18T02:50:08.120Z'
+    - react-native-router-flux > react-native > connect > serve-index > accepts > negotiator:
+        patched: '2017-05-18T02:50:08.120Z'
