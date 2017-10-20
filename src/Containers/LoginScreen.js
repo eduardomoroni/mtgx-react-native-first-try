@@ -17,6 +17,12 @@ import { loginUser } from '../Redux/Actions'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import I18n from 'react-native-i18n'
 
+const FBSDK = require('react-native-fbsdk')
+const {
+  LoginButton,
+  AccessToken
+} = FBSDK
+
 type LoginScreenProps = {
   user: any,
   error: string,
@@ -146,6 +152,26 @@ class LoginScreen extends React.Component {
 
           <View>
             <Text style={Styles.rowLabel}>{this.props.error}</Text>
+          </View>
+          <View>
+            <LoginButton
+              readPermissions={['public_profile']}
+              onLoginFinished={
+                    (error, result) => {
+                      if (error) {
+                        window.alert('login has error: ' + result.error)
+                      } else if (result.isCancelled) {
+                        window.alert('login is cancelled.')
+                      } else {
+                        AccessToken.getCurrentAccessToken().then(
+                          (data) => {
+                            window.alert(data.accessToken.toString())
+                          }
+                        )
+                      }
+                    }
+                  }
+              onLogoutFinished={() => window.alert('logout.')} />
           </View>
         </View>
 
